@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Payment System</title>
+</head>
+<body>
+    <!-- CONTAINER -->
+    <menu class="container" id="container">
+        <!-- CARDS -->
+        <figcaption class="cards">
+            <div class="card1">
+                <div class="card1-content">
+                    <img src="images/card-logo.svg" alt="card-logo" class="card-logo">
+                    <h2 class="card-number" id="card-number">0000 0000 0000 0000</h2>
+                    <div class="card-footer">
+                        <span class="card-name" id="card-name">JANE APPLESEED</span>
+                        <span class="card-month"><span id="card-month-span">00</span>/<span id="card-year">00</span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="card2">
+                <span id="card-cvc-id" class="card-cvc">000</span>
+            </div>
+        </figcaption>
+        <!-- CONTENT -->
+        <div class="content" id="content">
+            <!-- SUBMITTED -->
+            <div class="after-submit hidden" id="after-submit">
+                <img src="images/icon-complete.svg" alt="complete-logo" class="img-complete">
+                <h2 class="thank-you">THANK YOU!</h2>
+                <p class="thx-paragraph">We've added your card details</p>
+                <button class="after-button">Continue</button>
+            </div>
+            <!-- FORM -->
+            <form action="" class="form" id="form">
+                <div class="form-top">
+                    <label for="name" class="label-for label-font">CARDHOLDER NAME</label> <br>
+                    <input type="text" id="name" placeholder="e.g JANE APPLESEED" class="name top-inputs" required><br>
+                    <label for="card-number" class="label-number label-font">CARD NUMBER</label> <br>
+                    <input type="text" id="card-number-input" placeholder="e.g 1234 5678 9123 0000" class="top-inputs" maxlength="19" required><br>
+                </div>
+                <div class="form-bottom">
+                    <div class="form-bottom1">   
+                        <label for="month" class="label-month label-font">EXP. DATE (MM/YY)</label><br>
+                        <input type="text" id="month" pattern="\d*" placeholder="09" class="mm bot-inputs" maxlength="2" required>
+                        <input type="text" id="year" id="month"  pattern="\d*" placeholder="24" class="yy bot-inputs right" maxlength="2"required>
+                    </div>
+                    <div class="form-bottom2">
+                        <label for="cvc" class="label-cvc label-font">CVC</label><br>
+                        <input type="text" pattern="\d*" id="cvc" class="cvc" placeholder="999" maxlength="3" required>
+                    </div>
+                </div>
+                <input type="submit" id="button" value="Confirm" class="button">
+            </form>
+        </div>
+    </menu>
+
+    
+
+
+    <script src="app.js"></script>
+</body>
+</html>
